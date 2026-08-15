@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Organização e Planejamento</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Organização e Planejamento</h1>
+		<p>Gerencie suas tarefas, prazos e prioridades.</p>
+	</header>
+	<main>
+		<section class="task-creator">
+			<h2>Nova tarefa</h2>
+			<form id="task-form">
+				<input id="title" placeholder="Título" required>
+				<input id="due" type="date">
+				<select id="priority">
+					<option value="low">Baixa</option>
+					<option value="medium" selected>Média</option>
+					<option value="high">Alta</option>
+				</select>
+				<input id="category" placeholder="Categoria (ex: Trabalho, Pessoal)">
+				<textarea id="description" placeholder="Descrição (opcional)"></textarea>
+				<button type="submit">Adicionar tarefa</button>
+			</form>
+		</section>
+		<section class="controls">
+			<input id="search" placeholder="Pesquisar tarefas...">
+			<select id="filter">
+				<option value="all">Todas</option>
+				<option value="active">Ativas</option>
+				<option value="completed">Concluídas</option>
+				<option value="today">Hoje</option>
+			</select>
+		</section>
+		<section class="tasks">
+			<h2>Tarefas</h2>
+			<ul id="task-list"></ul>
+		</section>
+	</main>
+	<script src="script.js"></script>
+</body>
+</html>
